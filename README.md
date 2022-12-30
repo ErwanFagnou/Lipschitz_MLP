@@ -7,7 +7,7 @@ This project was done for the _Geometric Data Analysis_ course of the MVA Master
 | ![](images/rabbit_to_cat_standard.gif) | ![](images/rabbit_to_cat_lipschitz.gif) |
 
 
-This repository is an enhanced version the [official repository](https://github.com/ml-for-gp/jaxgptoolbox/tree/main/demos/lipschitz_mlp), which was a demonstration of 2D interpolation using the proposed method. Although the code is similar here (the files in _jaxgptoolbox_ were not modified), some nonnegligible modifications were made:
+This repository is an enhanced version the [official repository](https://github.com/ml-for-gp/jaxgptoolbox/tree/main/demos/lipschitz_mlp) made by the authors, which is a demonstration of 2D interpolation using the proposed method. Although the code is similar here (the files in _jaxgptoolbox_ were not modified), some nonnegligible modifications were made:
 - While the demonstration was only for 2D, the code was modified to work for 3D too
   - this includes rendering of the results as a video, using the Open3D library
 - Improving the way training samples are generated, as the sampling is very time-consuming (especially in 3D) due to the signed distance function
