@@ -1,6 +1,6 @@
 # Lipschitz MLP 
 
-This project was done for the _Geometric Data Analysis_ course of th MVA Master (at ENS Paris-Saclay). I analyzed the paper **_Learning Smooth Neural Functions via Lipschitz Regularization_**, Liu et al. 2022, published in _SIGGRAPH '22 Conference Proceedings_. The authors present a novel regularization technique for deep neural networks, in order to learn smooth functions, which are particularly important when dealing with geometric tasks. 
+This project was done for the _Geometric Data Analysis_ course of the MVA Master (at ENS Paris-Saclay). I analyzed the paper **_Learning Smooth Neural Functions via Lipschitz Regularization_**, Liu et al. 2022, published in _SIGGRAPH '22 Conference Proceedings_. The authors present a novel regularization technique for deep neural networks, in order to learn smooth functions, which are particularly important when dealing with geometric tasks. 
 
 |              Standard MLP              |              Lipschitz MLP              |
 |:--------------------------------------:|:---------------------------------------:|
