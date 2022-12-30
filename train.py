@@ -84,32 +84,32 @@ def normalize_V(V):
     V = V / np.max(V)  # in [0, 1]^d
     V = V + (1 - np.max(V, axis=0) + np.min(V, axis=0)) / 2  # in [0, 1]^d, centered
 
-    import open3d as o3d
-    vis = o3d.visualization.Visualizer()
-    vis.create_window(width=1024, height=1024)
-
-    opt: o3d.visualization.RenderOption = vis.get_render_option()
-    opt.background_color = np.array([1, 1, 1])
-    opt.mesh_show_back_face = True
-    opt.point_size = 1000 / 32
-    # opt.point_color_option = o3d.visualization.PointColorOption.
-
-    pcd = o3d.geometry.PointCloud()
-    pcd.points = o3d.utility.Vector3dVector(V)
-    vis.add_geometry(pcd)
-
-    box = o3d.geometry.AxisAlignedBoundingBox(min_bound=(0, 0, 0), max_bound=(1, 1, 1))
-    box.color = (0, 0, 0)
-    vis.add_geometry(box)
-
-    view: o3d.visualization.ViewControl = vis.get_view_control()
-    view.set_zoom(1)
-    view.set_front([-0.3, 0.3, 0.6])
-    view.set_lookat([0.5, 0.5, 0.5])
-    # view.set_up([0, 0, 0])
-
-    vis.run()
-    vis.destroy_window()
+    # import open3d as o3d
+    # vis = o3d.visualization.Visualizer()
+    # vis.create_window(width=1024, height=1024)
+    #
+    # opt: o3d.visualization.RenderOption = vis.get_render_option()
+    # opt.background_color = np.array([1, 1, 1])
+    # opt.mesh_show_back_face = True
+    # opt.point_size = 1000 / 64
+    # # opt.point_color_option = o3d.visualization.PointColorOption.
+    #
+    # pcd = o3d.geometry.PointCloud()
+    # pcd.points = o3d.utility.Vector3dVector(V)
+    # vis.add_geometry(pcd)
+    #
+    # box = o3d.geometry.AxisAlignedBoundingBox(min_bound=(0, 0, 0), max_bound=(1, 1, 1))
+    # box.color = (0, 0, 0)
+    # vis.add_geometry(box)
+    #
+    # view: o3d.visualization.ViewControl = vis.get_view_control()
+    # view.set_zoom(1)
+    # view.set_front([-0.3, 0.3, 0.6])
+    # view.set_lookat([0.5, 0.5, 0.5])
+    # # view.set_up([0, 0, 0])
+    #
+    # vis.run()
+    # vis.destroy_window()
     return V
 
 
@@ -123,8 +123,8 @@ def get_training_samples_generator(hyper_params):
 
         v0, v1 = normalize_V(v0), normalize_V(v1)
 
-        print(v0.shape, f0.shape)
-        print(v1.shape, f1.shape)
+        # print(v0.shape, f0.shape)
+        # print(v1.shape, f1.shape)
 
         return lambda x: (jgp.signed_distance(x, v0, f0)[0],
                           jgp.signed_distance(x, v1, f1)[0])
