@@ -26,10 +26,10 @@ hyper_params = {
     "dim_t": 1,
     "dim_out": 1,
     "h_mlp": [64, 64, 64, 64, 64],
-    "activation_fn": jax.nn.tanh,  # jax.nn.relu, jax.nn.tanh
+    "activation_fn": jax.nn.relu,  # jax.nn.relu, jax.nn.tanh
 
     # Training
-    "step_size": 1e-4,
+    "step_size": 1e-3,
     "num_epochs": 100000,
     "samples_per_epoch": 512,
 
